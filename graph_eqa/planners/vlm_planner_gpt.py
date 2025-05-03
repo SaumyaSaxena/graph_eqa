@@ -82,7 +82,7 @@ class VLMPlannerEQAGPT:
         self._vlm_type = cfg.name
         self._use_image = cfg.use_image
 
-        self._example_plan = '' #TODO(saumya)
+        self._example_plan = ''
         self._history = ''
         self.full_plan = ''
         self._t = 0
@@ -181,7 +181,6 @@ class VLMPlannerEQAGPT:
             return prompt_no_image
 
     def get_current_state_prompt(self, scene_graph, agent_state):
-        # TODO(saumya): Include history
         prompt = f"At t = {self.t}: \n \
             CURRENT AGENT STATE: {agent_state}. \n \
             SCENE GRAPH: {scene_graph}. \n  "
@@ -210,8 +209,7 @@ class VLMPlannerEQAGPT:
         messages=[
             {"role": "system", "content": f"AGENT ROLE: {self.agent_role_prompt}"},
             {"role": "system", "content": f"QUESTION: {self._question}"},
-            {"role": "user", "content": f"CURRENT STATE: {current_state_prompt}."},
-            # {"role": "user", "content": f"EXAMPLE PLAN: {self._example_plan}"} # TODO(saumya)
+            {"role": "user", "content": f"CURRENT STATE: {current_state_prompt}."}
         ]
 
         if self._use_image:

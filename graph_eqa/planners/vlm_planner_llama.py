@@ -81,7 +81,7 @@ class VLMPlannerEQALlama4:
         self._vlm_type = cfg.name
         self._use_image = cfg.use_image
 
-        self._example_plan = '' #TODO(saumya)
+        self._example_plan = ''
         self._history = ''
         self.full_plan = ''
         self._t = 0
@@ -229,7 +229,6 @@ class VLMPlannerEQALlama4:
       return instructions
 
     def get_current_state_prompt(self, scene_graph, agent_state):
-        # TODO(saumya): Include history
         prompt = f"At t = {self.t}: \n \
             CURRENT AGENT STATE: {agent_state}. \n \
             SCENE GRAPH: {scene_graph}. \n"

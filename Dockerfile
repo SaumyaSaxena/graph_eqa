@@ -57,7 +57,7 @@ RUN mkdir -p catkin_ws/src \
 	&& catkin init \
 	&& catkin config -DCMAKE_BUILD_TYPE=Release \
 	&& cd src \
-	&& git clone -b grapheqa https://github.com/blakerbuchanan/Hydra ./hydra \
+	&& git clone -b grapheqa https://github.com/grapheqa/Hydra ./hydra \
 	&& sed -i -E 's|git@github\.com:(.*)\.git|https://github.com/\1.git|g' hydra/install/hydra.rosinstall \
 	&& vcs import . < hydra/install/hydra.rosinstall
 
@@ -105,7 +105,7 @@ RUN source /catkin_ws/devel/setup.bash \
 WORKDIR /root
 
 RUN source activate grapheqa \
-    && git clone https://github.com/SaumyaSaxena/graph_eqa.git \
+    && git clone https://github.com/grapheqa/graph_eqa.git \
     && cd graph_eqa \
     && pip install sentencepiece \
     && pip install -e . \
@@ -135,9 +135,6 @@ RUN apt-get update && apt-get install -y vim iputils-ping && rm -rf /var/lib/apt
 RUN echo "source /catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 WORKDIR /root/graph_eqa
-# RUN wget https://github.com/SaumyaSaxena/explore-eqa_semnav/blob/master/data/questions.csv
-# RUN wget https://github.com/SaumyaSaxena/explore-eqa_semnav/blob/master/data/scene_init_poses.csv
-
 RUN source activate grapheqa && python -c "from transformers import AutoModel ; model = AutoModel.from_pretrained('google/siglip-so400m-patch14-384')"
 
 # Default command: Launch bash

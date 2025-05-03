@@ -4,7 +4,7 @@
 CONTAINER_NAME="grapheqa-for-habitat"
 
 # Docker image to use
-DOCKER_IMAGE="blakerbuchanan/grapheqa_for_habitat:0.0.1"
+DOCKER_IMAGE="grapheqa/grapheqa_for_habitat:0.0.1"
 
 # Path to the workspace directory
 # You should be in the grapheqa_ws directory

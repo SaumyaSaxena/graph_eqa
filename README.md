@@ -5,20 +5,15 @@ This repo provides code for GraphEQA, a novel approach for utilizing 3D scene gr
     <img src="doc/grapheqa.gif">
 </div>
 
-* Website: https://saumyasaxena.github.io/grapheqa/
-* arXiv: https://www.arxiv.org/abs/2412.14480
+* Website: https://grapheqa.github.io/
 
 If you find GraphEQA relevant or useful for your research, please use the following citation:
 
 ```bibtex
-@misc{saxena2024grapheqausing3dsemantic,
+@misc{2024grapheqausing3dsemantic,
       title={GraphEQA: Using 3D Semantic Scene Graphs for Real-time Embodied Question Answering}, 
-      author={Saumya Saxena and Blake Buchanan and Chris Paxton and Bingqing Chen and Narunas Vaskevicius and Luigi Palmieri and Jonathan Francis and Oliver Kroemer},
-      year={2024},
-      eprint={2412.14480},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2412.14480}, 
+      author={Anonymous Authors},
+      year={2025}
 }
 ```
 
@@ -39,7 +34,7 @@ Owners and collaborators of this repo are not claiming to have developed anythin
 #### Prerequisites
 1. Install docker.
 
-2. Run `git clone https://github.com/SaumyaSaxena/graph_eqa.git`. GraphEQA is also pip installable should you prefer installing it in a Python environment (see below).
+2. Run `git clone https://github.com/grapheqa/graph_eqa.git`. GraphEQA is also pip installable should you prefer installing it in a Python environment (see below).
 
 #### Set up Docker workspace for running GraphEQA for Habitat-Sim
 There are two Docker images for GraphEQA to support simulation-based experiments in Habitat-Sim and embodied experiments on the Hello Robot Stretch platform.
@@ -48,12 +43,6 @@ Run the following script to build the docker image locally.
 
 ```bash
 ./docker/docker_build_with_habitat.sh
-```
-
-If you have a reasonably fast internet connection, it may be faster for you to just pull the image directly from Docker hub.
-
-```bash
-docker pull blakerbuchanan/grapheqa_for_habitat:0.0.1
 ```
 
 The following script will run a container:
@@ -77,12 +66,6 @@ Run the following script to build the docker image locally.
 ./docker/docker_build.sh
 ```
 
-If you have a reasonably fast internet connection, it may be faster for you to just pull the image directly from Docker hub.
-
-```bash
-docker pull blakerbuchanan/grapheqa_for_stretch:0.0.1
-```
-
 The following script will run a container 
 
 ```bash
@@ -98,7 +81,7 @@ docker exec -it grapheqa-for-stretch bash
 ### Setting up Hydra on Ubuntu 20.04
 This set of instructions is only for local Ubuntu 20.04 installations.
 
-0) Install our fork of Hydra following the instructions at [this link](https://github.com/blakerbuchanan/Hydra). Verify that you are on the `grapheqa` branch.
+0) Install our fork of Hydra following the instructions at [this link](https://github.com/grapheqa/Hydra). Verify that you are on the `grapheqa` branch.
 
 1) If you do not have conda, install it. Then create a conda environment:
 
@@ -127,16 +110,16 @@ hm3d/train
 ```
 
 ### Download Explore-EQA dataset
-Navigate to [this repo](https://github.com/SaumyaSaxena/explore-eqa_semnav/tree/master/data) and download `questions.csv` and `scene_init_poses.csv` into a directory in your workspace.  
+Navigate to [this repo](https://github.com/grapheqa/explore-eqa_semnav/tree/master/data) and download `questions.csv` and `scene_init_poses.csv` into a directory in your workspace.  
 
 ### Install the Stretch AI package from Hello Robot
-If running GraphEQA on Stretch RE2 platform, follow the install instructions at our fork of `stretch_ai` [found here](https://github.com/blakerbuchanan/stretch_ai).
+If running GraphEQA on Stretch RE2 platform, follow the install instructions at our fork of `stretch_ai` [found here](https://github.com/grapheqa/stretch_ai).
 
 ### Installing GraphEQA
 Clone and install GraphEQA in the 'grapheqa' conda environment:
 
 ```bash
-git clone git@github.com:SaumyaSaxena/graph_eqa.git
+git clone git@github.com:grapheqa/graph_eqa.git
 cd graph_eqa
 pip install -e .
 ```
@@ -169,7 +152,7 @@ python scripts/run_vlm_planner_eqa_habitat.py -cf grapheqa_habitat
 Results will be saved in the `graph_eqa/outputs` directory.
 
 ## Running GraphEQA with Habitat Hello Robot's Stretch RE2
-To run GraphEQA on Hello Robot's Stretch platform, you will need to run the server on the Stretch robot following the instructions at [this fork](https://github.com/blakerbuchanan/stretch_ai). Once you have successfully launched the server, open a terminal on your computer (client side) and run:
+To run GraphEQA on Hello Robot's Stretch platform, you will need to run the server on the Stretch robot following the instructions at [this fork](https://github.com/grapheqa/stretch_ai). Once you have successfully launched the server, open a terminal on your computer (client side) and run:
 
 ```bash
 cd graph_eqa
