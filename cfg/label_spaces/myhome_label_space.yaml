@@ -1,5 +1,5 @@
 ---
-total_semantic_labels: 172
+total_semantic_labels: 173
 dynamic_labels: []
 invalid_labels: []
 object_labels:
@@ -165,7 +165,7 @@ object_labels:
   - '159'
   - '160'
   - '161'
-  - '163'
+  - '162'
   - '164'
   - '165'
   - '166'
@@ -174,7 +174,8 @@ object_labels:
   - '169'
   - '170'
   - '171'
-surface_places_labels: [162]
+  - '172'
+surface_places_labels: [163]
 label_names:
   - {label: 0, name: .}
   - {label: 1, name: action_figure}
@@ -316,35 +317,36 @@ label_names:
   - {label: 137, name: coat_rack}
   - {label: 138, name: rug}
   - {label: 139, name: mat}
-  - {label: 140, name: bathtub}
-  - {label: 141, name: bed}
-  - {label: 142, name: bench}
-  - {label: 143, name: cabinet}
-  - {label: 144, name: chair}
-  - {label: 145, name: chest_of_drawers}
-  - {label: 146, name: couch}
-  - {label: 147, name: counter}
-  - {label: 148, name: filing_cabinet}
-  - {label: 149, name: hamper}
-  - {label: 150, name: serving_cart}
-  - {label: 151, name: shelves}
-  - {label: 152, name: shoe_rack}
-  - {label: 153, name: sink}
-  - {label: 154, name: stand}
-  - {label: 155, name: stool}
-  - {label: 156, name: table}
-  - {label: 157, name: toilet}
-  - {label: 158, name: trunk}
-  - {label: 159, name: wardrobe}
-  - {label: 160, name: washer_dryer}
-  - {label: 161, name: wall}
-  - {label: 162, name: floor}
-  - {label: 163, name: ceiling}
-  - {label: 164, name: door}
-  - {label: 165, name: picture_frame}
-  - {label: 166, name: desktop_computer}
-  - {label: 167, name: box}
-  - {label: 168, name: staircase}
-  - {label: 169, name: book_shelf}
-  - {label: 170, name: stove}
-  - {label: 171, name: other}
+  - {label: 140, name: person}
+  - {label: 141, name: bathtub}
+  - {label: 142, name: bed}
+  - {label: 143, name: bench}
+  - {label: 144, name: cabinet}
+  - {label: 145, name: chair}
+  - {label: 146, name: chest_of_drawers}
+  - {label: 147, name: couch}
+  - {label: 148, name: counter}
+  - {label: 149, name: filing_cabinet}
+  - {label: 150, name: hamper}
+  - {label: 151, name: serving_cart}
+  - {label: 152, name: shelves}
+  - {label: 153, name: shoe_rack}
+  - {label: 154, name: sink}
+  - {label: 155, name: stand}
+  - {label: 156, name: stool}
+  - {label: 157, name: table}
+  - {label: 158, name: toilet}
+  - {label: 159, name: trunk}
+  - {label: 160, name: wardrobe}
+  - {label: 161, name: washer_dryer}
+  - {label: 162, name: wall}
+  - {label: 163, name: floor}
+  - {label: 164, name: ceiling}
+  - {label: 165, name: door}
+  - {label: 166, name: picture_frame}
+  - {label: 167, name: desktop_computer}
+  - {label: 168, name: box}
+  - {label: 169, name: staircase}
+  - {label: 170, name: book_shelf}
+  - {label: 171, name: stove}
+  - {label: 172, name: other}

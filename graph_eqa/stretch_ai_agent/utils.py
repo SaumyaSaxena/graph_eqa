@@ -23,7 +23,7 @@ def _format_list(name, values, collapse=True, **kwargs):
     
 def write_config_yaml(category_mapping, label_space='detic'):
     package_path = Path(__file__).absolute().parent.parent.parent
-    output_path = package_path / f'config/label_spaces/{label_space}_label_space.yaml'
+    output_path = package_path / f'cfg/label_spaces/{label_space}_label_space.yaml'
     invalid_labels = []
     surface_labels = []
     dynamic_labels = []

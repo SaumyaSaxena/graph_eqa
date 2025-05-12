@@ -8,10 +8,14 @@ import os
 import mimetypes
 from graph_eqa.utils.data_utils import get_latest_image
 
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+if "GOOGLE_API_KEY" in os.environ:
+    genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+else:
+    print('Gemini token has not been set up yet!')
 
 # Choose a Gemini model.
 gemini_model = genai.GenerativeModel(model_name="models/gemini-2.5-pro-preview-03-25")
+# gemini_model = genai.GenerativeModel(model_name="models/gemini-2.5-flash-preview-04-17")
 
 def encode_image(image_path):
   with open(image_path, "rb") as image_file:
@@ -295,6 +299,7 @@ class VLMPlannerEQAGemini:
             {"role": "model", "parts": [{"text": f"QUESTION: {self._question}"}]},
             {"role": "user", "parts": [{"text": f"CURRENT STATE: {current_state_prompt}."}]},
         ]
+        print(messages)
         
         if self._use_image:
             image_path = get_latest_image(self._output_path)

@@ -16,9 +16,12 @@ Structured output resources for Claude API:
 2. https://github.com/anthropics/anthropic-cookbook/blob/main/tool_use/tool_use_with_pydantic.ipynb
 '''
 
-client = anthropic.Anthropic(
-    api_key=os.environ["ANTHROPIC_API_KEY"],  # This is the default and can be omitted
-)
+if "ANTHROPIC_API_KEY" in os.environ:
+    client = anthropic.Anthropic(
+        api_key=os.environ["ANTHROPIC_API_KEY"],  # This is the default and can be omitted
+    )
+else:
+    print('Anthropic token has not been set up yet!')
 
 
 def encode_image(image_path):

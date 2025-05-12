@@ -1,0 +1,16 @@
+Question0:
+  question: "What is the color of the dehumidifier machine?"
+  choices:
+    A: 'Blue'
+    B: 'White'
+    C: 'Black'
+  answer: B
+  enrich_labels: "dehumidifier machine"
+
+Question1:
+  question: "Is there any object on the black plastic drawer"
+  choices:
+    A: 'Yes'
+    B: 'No'
+  answer: B
+  enrich_labels: "black plastic drawer"
